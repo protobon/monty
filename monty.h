@@ -41,6 +41,7 @@ typedef struct instruction_s
 	{"pall", pall},\
 	{"pint", pint},\
 	{"pop", pop},\
+	{"swap", swap},\
 	{NULL, NULL} \
 }
 
@@ -63,6 +64,7 @@ void pall(stack_t **stack, unsigned int ln);
 void opcode(stack_t **stack, char *str, unsigned int ln);
 void pint(stack_t **stack, unsigned int ln);
 void pop(stack_t **stack, unsigned int ln);
+void swap(stack_t **stack, unsigned int ln);
 
 stack_t *add_node(stack_t **stack, const int n);
 void free_stack(stack_t *stack);
