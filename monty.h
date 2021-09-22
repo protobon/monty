@@ -39,6 +39,7 @@ typedef struct instruction_s
 #define INSTRUCTIONS { \
 	{"push", push},\
 	{"pall", pall},\
+	{"pint", pint},\
 	{NULL, NULL} \
 }
 
@@ -59,7 +60,7 @@ help global;
 void push(stack_t **stack, unsigned int ln);
 void pall(stack_t **stack, unsigned int ln);
 void opcode(stack_t **stack, char *str, unsigned int ln);
-
+void pint(stack_t **stack, unsigned int ln);
 
 stack_t *add_node(stack_t **stack, const int n);
 void free_stack(stack_t *stack);
