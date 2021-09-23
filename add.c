@@ -13,7 +13,7 @@ void add(stack_t **stack, unsigned int ln)
 
 	if (!stack || !(*stack) || (*stack)->next == NULL)
 	{
-		fprintf(stderr, "L%d: can't swap, stack too short\n", ln);
+		fprintf(stderr, "L%d: can't add, stack too short\n", ln);
 		exit(EXIT_FAILURE);
 	}
 	a = (*stack)->n + (*stack)->next->n;
