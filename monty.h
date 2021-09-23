@@ -51,6 +51,7 @@ typedef struct instruction_s
 	{"pchar", pchar},\
 	{"pstr", pstr},\
 	{"rotl", rotl},\
+	{"rotr", rotr},\
 	{NULL, NULL} \
 }
 
@@ -84,6 +85,7 @@ void mod(stack_t **stack, unsigned int ln);
 void pchar(stack_t **stack, unsigned int ln);
 void pstr(stack_t **stack, unsigned int ln);
 void rotl(stack_t **stack, unsigned int ln);
+void rotr(stack_t **stack, unsigned int ln);
 
 /* stack functionalities */
 stack_t *add_node(stack_t **stack, const int n);
