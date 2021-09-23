@@ -11,19 +11,16 @@
   */
 void pstr(stack_t **stack, unsigned int ln __attribute__((unused)))
 {
-	stack_t *tmp = NULL;
+	stack_t *tmp = *stack;
 
-	if (!stack || !(*stack))
-		putchar('\n');
-	tmp = *stack;
 	while (tmp)
 	{
-		if ((isascii(tmp->n) == 0) || (tmp->n == 0))
+		if ((isascii(tmp->n) == 0) || (tmp->n <= 0))
 		{
-			putchar('\n');
 			break;
 		}
 		putchar(tmp->n);
 		tmp = tmp->next;
 	}
+	putchar('\n');
 }
