@@ -47,6 +47,7 @@ typedef struct instruction_s
 	{"sub", sub},\
 	{"div", _div},\
 	{"mul", _mul},\
+	{"mod", mod},\
 	{NULL, NULL} \
 }
 
@@ -76,6 +77,7 @@ void nop(stack_t **stack, unsigned int ln);
 void sub(stack_t **stack, unsigned int ln);
 void _div(stack_t **stack, unsigned int ln);
 void _mul(stack_t **stack, unsigned int ln);
+void mod(stack_t **stack, unsigned int ln);
 
 /* stack functionalities */
 stack_t *add_node(stack_t **stack, const int n);
