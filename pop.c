@@ -1,5 +1,12 @@
 #include "monty.h"
 
+/**
+  * pop - removes top element of stack
+  * @stack: head of stack
+  * @ln: line number
+  * Description: if stack is empty, print error and
+  * exit failure
+  */
 void pop(stack_t **stack, unsigned int ln)
 {
 	stack_t *tmp;

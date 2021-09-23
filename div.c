@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
-  * div - divides second top by top element of stack
+  * _div - divides second top by top element of stack
   * @stack: head of stack
   * @ln: line number
   * Description: divides and removes top node,

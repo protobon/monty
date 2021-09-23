@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
-  * mul - multiplies top two elements of stack
+  * _mul - multiplies top two elements of stack
   * @stack: head of stack
   * @ln: line number
   * Description: multiplies last two and removes top node,

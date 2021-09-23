@@ -54,7 +54,8 @@ typedef struct instruction_s
   * struct help - global struct to hold argument of opcode
   * @data_struct: asd
   * @argument: arg of opcode
-  * Description: asd
+  * Description: use second argument (if exists) to
+  * push to stack
   */
 typedef struct help
 {
