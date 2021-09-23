@@ -10,7 +10,7 @@ void pchar(stack_t **stack, unsigned int ln)
 		exit (EXIT_FAILURE);
 	}
 	a = (*stack)->n;
-	if ((a >= 65 && a <= 90) || (a >= 97 && a <= 122))
+	if (a >= 32 && a <= 127)
 		printf("%c\n", a);
 	else
 	{
