@@ -49,6 +49,7 @@ typedef struct instruction_s
 	{"mul", _mul},\
 	{"mod", mod},\
 	{"pchar", pchar},\
+	{"pstr", pstr},\
 	{NULL, NULL} \
 }
 
@@ -80,6 +81,7 @@ void _div(stack_t **stack, unsigned int ln);
 void _mul(stack_t **stack, unsigned int ln);
 void mod(stack_t **stack, unsigned int ln);
 void pchar(stack_t **stack, unsigned int ln);
+void pstr(stack_t **stack, unsigned int ln);
 
 /* stack functionalities */
 stack_t *add_node(stack_t **stack, const int n);
