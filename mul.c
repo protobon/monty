@@ -7,7 +7,7 @@
   * Description: multiplies last two and removes top node,
   * prints error if stack is shorter than two nodes
   */
-void mul(stack_t **stack, unsigned int ln)
+void _mul(stack_t **stack, unsigned int ln)
 {
 	int a;
 
