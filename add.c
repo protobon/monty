@@ -9,7 +9,6 @@
   */
 void add(stack_t **stack, unsigned int ln)
 {
-	stack_t *tmp;
 	int a;
 
 	if (!stack || !(*stack) || (*stack)->next == NULL)
