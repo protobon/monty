@@ -45,6 +45,7 @@ typedef struct instruction_s
 	{"add", add},\
 	{"nop", nop},\
 	{"sub", sub},\
+	{"mul", mul},\
 	{NULL, NULL} \
 }
 
@@ -71,6 +72,7 @@ void swap(stack_t **stack, unsigned int ln);
 void add(stack_t **stack, unsigned int ln);
 void nop(stack_t **stack, unsigned int ln);
 void sub(stack_t **stack, unsigned int ln);
+void mul(stack_t **stack, unsigned int ln);
 
 /* stack functionalities */
 stack_t *add_node(stack_t **stack, const int n);
