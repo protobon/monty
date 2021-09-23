@@ -43,6 +43,7 @@ typedef struct instruction_s
 	{"pop", pop},\
 	{"swap", swap},\
 	{"add", add},\
+	{"nop", nop},\
 	{NULL, NULL} \
 }
 
@@ -60,14 +61,16 @@ typedef struct help
 help global;
 
 /* opcodes */
+void opcode(stack_t **stack, char *str, unsigned int ln);
 void push(stack_t **stack, unsigned int ln);
 void pall(stack_t **stack, unsigned int ln);
-void opcode(stack_t **stack, char *str, unsigned int ln);
 void pint(stack_t **stack, unsigned int ln);
 void pop(stack_t **stack, unsigned int ln);
 void swap(stack_t **stack, unsigned int ln);
 void add(stack_t **stack, unsigned int ln);
+void nop(stack_t **stack, unsigned int ln);
 
+/* stack functionalities */
 stack_t *add_node(stack_t **stack, const int n);
 void free_stack(stack_t *stack);
 size_t print_stack(const stack_t *stack);
