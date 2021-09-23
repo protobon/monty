@@ -16,7 +16,7 @@ void mul(stack_t **stack, unsigned int ln)
 		fprintf(stderr, "L%d: can't mul, stack too short\n", ln);
 		exit(EXIT_FAILURE);
 	}
-	a = (*stack)->next->n * (*stack)->n;
+	a = ((*stack)->next->n) * ((*stack)->n);
 	pop(stack, ln);
 	(*stack)->n = a;
 }
