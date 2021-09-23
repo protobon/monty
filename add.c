@@ -1,5 +1,12 @@
 #include "monty.h"
 
+/**
+  * add - adds top two values of the stack
+  * @stack: head of stack
+  * @ln: line number
+  * Description: adds up last two and removes top node,
+  * prints error if stack is shorter than two nodes
+  */
 void add(stack_t **stack, unsigned int ln)
 {
 	stack_t *tmp;
@@ -10,10 +17,7 @@ void add(stack_t **stack, unsigned int ln)
 		fprintf(stderr, "L%d: can't swap, stack too short\n", ln);
 		exit(EXIT_FAILURE);
 	}
-	tmp = (*stack)->next;
-	a = (*stack)->n + tmp->n;
-	tmp->n = a;
-	tmp->prev = NULL;
-	free(*stack);
-	*stack = tmp;
+	a = (*stack)->n + (*stack)->next->n;
+	pop(stack, ln);
+	(*stack)->n = a;
 }
