@@ -5,8 +5,7 @@
   * @stack: head of stack
   * @ln: line count
   */
-void nop(stack_t **stack, unsigned int ln)
+void nop(stack_t **stack, unsigned int ln __attribute__((unused)))
 {
-	stack = stack;
-	ln = ln;
+	(void) stack;
 }
