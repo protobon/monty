@@ -3,9 +3,8 @@
 /**
  * add_node - adds a node to the start of the stack
  * @stack: stack head
- * @n: data for new node
- * Return: new node, if creation fails, the
- * function will return NULL.
+ * @n: new node data
+ * Return: new node, NULL if failed
  */
 stack_t *add_node(stack_t **stack, const int n)
 {
