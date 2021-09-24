@@ -1,6 +1,17 @@
 #include "monty.h"
 
 /**
+  * usage_error - prints error message
+  * Description: prints message when wrong use
+  * of program, exit failure
+  */
+void usage_error(void)
+{
+	fprintf(stderr, "USAGE: monty file\n");
+	exit(EXIT_FAILURE);
+}
+
+/**
   * main - reads monty file from stdin
   * @ac: argument count, always 2
   * @av: argument vector, holds program name and filename
@@ -15,11 +26,10 @@ int main(int ac, char **av)
 	ssize_t read;
 	stack_t *stack = NULL;
 
+	global.data_struct = 1;
 	if (ac != 2)
-	{
-		fprintf(stderr, "USAGE: monty file\n");
-		exit(EXIT_FAILURE);
-	}
+		usage_error();
+
 	fp = fopen(av[1], "r");
 	if (!fp)
 	{

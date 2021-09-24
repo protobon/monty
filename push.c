@@ -15,9 +15,20 @@ void push(stack_t **stack, unsigned int ln)
 		exit(EXIT_FAILURE);
 	}
 
-	if (!add_node(stack, atoi(global.argument)))
+	if (global.data_struct == 1)
 	{
-		fprintf(stderr, "Error: malloc failed\n");
-		exit(EXIT_FAILURE);
+		if (!add_node(stack, atoi(global.argument)))
+		{
+			fprintf(stderr, "Error: malloc failed\n");
+			exit(EXIT_FAILURE);
+		}
+	}
+	else
+	{
+		if (!add_node_queue(stack, atoi(global.argument)))
+		{
+			fprintf(stderr, "Error: malloc failed\n");
+			exit(EXIT_FAILURE);
+		}
 	}
 }

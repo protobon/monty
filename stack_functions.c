@@ -27,6 +27,37 @@ stack_t *add_node(stack_t **stack, const int n)
 }
 
 /**
+  * add_node_queue - adds a node to the end of the stack
+  * @stack: head of stack
+  * @n: new node data
+  * Return: new node address, NULL if failed
+  */
+stack_t *add_node_queue(stack_t **stack, const int n)
+{
+	stack_t *new = NULL, *last = *stack;
+
+	new = malloc(sizeof(stack_t));
+	if (!new)
+		return (NULL);
+
+	new->n = n;
+	new->next = NULL;
+
+	if (*stack == NULL)
+	{
+		new->prev = NULL;
+		*stack = new;
+		return (new);
+	}
+	while (last->next)
+		last = last->next;
+
+	last->next = new;
+	new->prev = last;
+	return (new);
+}
+
+/**
  * print_stack - prints the contents of stack
  * @stack: stack head
  *

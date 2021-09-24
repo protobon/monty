@@ -91,6 +91,7 @@ void rotr(stack_t **stack, unsigned int ln);
 stack_t *add_node(stack_t **stack, const int n);
 void free_stack(stack_t *stack);
 size_t print_stack(const stack_t *stack);
+stack_t *add_node_queue(stack_t **stack, const int n);
 
 int is_digit(char *string);
 
